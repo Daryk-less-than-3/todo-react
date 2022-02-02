@@ -12,6 +12,7 @@ body {
 }
 
 .todo {
+  display: flex;
   position: absolute;
   left: 50%;
   top: 50%;
@@ -31,7 +32,12 @@ body {
     border-radius: 10px;
     padding: 60px 20px;
   }
+  &__tasks {
+    flex: 1;
+    padding: 60px;
+  }
 }
+
 .button {
   background: #4dd599;
   border-radius: 4px;
