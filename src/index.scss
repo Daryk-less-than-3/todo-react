@@ -15,8 +15,8 @@ body {
   position: absolute;
   left: 50%;
   top: 50%;
-  width: 750px;
-  height: 530px;
+  width: 920px;
+  height: 700px;
   transform: translate(-50%, -50%);
   box-shadow: 1px 2px 20px #f4f6f8;
   border: 1px solid #f1f1f1;
@@ -26,8 +26,36 @@ body {
   &__sidebar {
     background-color: #f4f6f8;
     width: 200px;
-    height: 100%;
-    border-right: 1px solid #f1f1f1;
+    height: calc(100% - 120px);
+    border: 1px solid #f1f1f1;
+    border-radius: 10px;
     padding: 60px 20px;
+  }
+}
+.button {
+  background: #4dd599;
+  border-radius: 4px;
+  color: #fff;
+  border: 0;
+  padding: 10px 20px;
+  cursor: pointer;
+  &:hover {
+    background: darken(#4dd599, 5%);
+  }
+  &:active {
+    background: darken(#4dd599, 10%);
+  }
+}
+
+.field {
+  background: #ffffff;
+  border: 1px solid #efefef;
+  box-sizing: border-box;
+  border-radius: 4px;
+  padding: 8px 12px;
+  width: 100%;
+  box-sizing: border-box;
+  &:focus {
+    border-color: #1f83a1;
   }
 }

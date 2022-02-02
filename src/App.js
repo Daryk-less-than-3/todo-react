@@ -1,6 +1,8 @@
 import React from "react";
 import List from "./components/List";
+import AddTask from "./components/AddTask";
 
+import DB from "./assets/db.json";
 function App() {
   return (
     <div className="todo">
@@ -42,7 +44,9 @@ function App() {
               name: "Some Task#3",
             },
           ]}
+          isRemovable={true}
         ></List>
+        <AddTask colors={DB.colors}></AddTask>
       </div>
       <div className="todo__task">somelittle</div>
     </div>
