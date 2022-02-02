@@ -1,4 +1,5 @@
 .list {
+  $self: &;
   margin-bottom: 30px;
   &__add-task {
     opacity: 1;
@@ -16,15 +17,24 @@
       }
     }
   }
+
   li {
     display: flex;
     align-items: center;
     cursor: pointer;
     margin-bottom: 5px;
     padding: 10px 12px;
+    transition: background-color 0.3s ease-in-out;
 
-    border-radius: 10px;
-    border: 1px solid #76767662;
+    &:hover #{$self}__remove-icon {
+      opacity: 0.2;
+    }
+    &:hover {
+      background: rgba(255, 255, 255, 0.74);
+    }
+    span {
+      flex: 1;
+    }
 
     &.active {
       background: #ffffff;
@@ -45,6 +55,14 @@
         path {
           fill: #7c7c7c;
         }
+      }
+    }
+    .list__remove-icon {
+      opacity: 0;
+      transition: opacity 0.3s ease-in-out;
+
+      &:hover {
+        opacity: 1;
       }
     }
   }
