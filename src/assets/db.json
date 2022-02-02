@@ -1,16 +1,16 @@
 {
     "lists":[
-        {"id" : 1, "name" : "task1", "colorId" : 5},
-        {"id" : 2, "name" : "task2", "colorId" : 4},
-        {"id" : 3, "name" : "task3", "colorId" : 3},
-        {"id" : 4, "name" : "task4", "colorId" : 2},
-        {"id" : 5, "name" : "task5", "colorId" : 1}
+        {"id" : 1, "name" : "Покупки", "colorId" : 5},
+        {"id" : 2, "name" : "Фронтенд", "colorId" : 4},
+        {"id" : 3, "name" : "Фильмы и сериалы", "colorId" : 3},
+        {"id" : 4, "name" : "Книги", "colorId" : 2},
+        {"id" : 5, "name" : "Личное", "colorId" : 1}
     ],
     "tasks": [
-        {"id" : 1, "listId" : 2, "text" : "some little text for task"},
-        {"id" : 2, "listId" : 2, "text" : "some little text for task"},
-        {"id" : 3, "listId" : 2, "text" : "some little text for task"},
-        {"id" : 4, "listId" : 2, "text" : "some little text for task"}
+        {"id" : 1, "listId" : 2, "text" : "some  text for task"},
+        {"id" : 2, "listId" : 2, "text" : "some  text for task"},
+        {"id" : 3, "listId" : 2, "text" : "some  text for task"},
+        {"id" : 4, "listId" : 2, "text" : "some  text for task"}
         
     ],
     "colors": [
