@@ -34,6 +34,10 @@
     }
     span {
       flex: 1;
+      text-overflow: ellipsis;
+      width: 130px;
+      overflow: hidden;
+      white-space: nowrap;
     }
 
     &.active {

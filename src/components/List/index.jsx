@@ -1,30 +1,53 @@
 import React from "react";
+import axios from "axios";
 import classNames from "classnames";
 
 import removeSvg from "../../assets/icons/remove.svg";
 import "./List.scss";
-import { Badge } from "../Badge";
-const List = ({ items, isRemovable, onClick, onRemove }) => {
+import Badge from "../Badge";
+
+const List = ({
+  items,
+  isRemovable,
+  onClick,
+  onRemove,
+  onClickItem,
+  activeItem,
+}) => {
   const removeList = (item) => {
     if (window.confirm(`Удалить список: ${item.name}?`)) {
-      onRemove(item);
+      axios.delete("http://localhost:3001/lists/" + item.id).then(() => {
+        onRemove(item.id);
+      });
     }
   };
   return (
     <ul onClick={onClick} className="list">
-      {items.map((obj, i) => (
+      {items.map((item, index) => (
         <li
-          key={i}
-          className={classNames(obj.className, { active: obj.active })}
+          key={index}
+          className={classNames(item.className, {
+            active: item.active
+              ? item.active
+              : activeItem && activeItem.id === item.id,
+          })}
+          onClick={onClickItem ? () => onClickItem(item) : null}
         >
-          <i>{obj.icon ? obj.icon : <Badge color={obj.color}></Badge>}</i>
-          <span>{obj.name}</span>
+          <i>
+            {" "}
+            {item.icon ? item.icon : <Badge color={item.color.name}></Badge>}
+          </i>
+          <span>
+            {" "}
+            {item.name}
+            {item.tasks && `(${item.tasks.length})`}
+          </span>
           {isRemovable && (
             <img
-              onClick={() => removeList(obj)}
               className="list__remove-icon"
               src={removeSvg}
-              alt="remove-task"
+              alt="Remove Icon"
+              onClick={() => removeList(item)}
             ></img>
           )}
         </li>
