@@ -1,31 +1,6 @@
 {
-  "lists": [
-    {
-      "name": "Grascus ",
-      "colorId": 8,
-      "id": 1
-    }
-  ],
-  "tasks": [
-    {
-      "listId": 1,
-      "text": "Play ffxiv",
-      "completed": false,
-      "id": 1
-    },
-    {
-      "listId": 1,
-      "text": "Delete Genshin",
-      "completed": true,
-      "id": 2
-    },
-    {
-      "listId": 1,
-      "text": "Delete wow",
-      "completed": false,
-      "id": 3
-    }
-  ],
+  "lists": [],
+  "tasks": [],
   "colors": [
     {
       "id": 1,

@@ -28,11 +28,11 @@ const Tasks = ({
         });
     }
   };
-
+  console.log(list.color.hex);
   return (
     <div className="tasks">
       <h2 style={{ color: list.color.hex }} className="tasks__title">
-        {list.name}{" "}
+        {list.name}
         <img onClick={editTitle} src={editSvg} alt="Edit Title"></img>{" "}
       </h2>
 
