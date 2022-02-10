@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+
 function Task({ id, text, completed, onRemove, list, onEdit, onComplete }) {
   const onChangeCheckBox = (e) => {
     onComplete(list.id, id, e.target.checked);
